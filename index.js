@@ -40,7 +40,8 @@ function playGame(){
     playRound(getHumanChoice(), getComputerChoice());
     alert(humanScore+" "+computerScore);
     if (humanScore>computerScore) alert("human beats bot");
-    else alert("human is loser")
+    else if (humanScore<computerScore) alert("human is loser");
+    else alert("No One wins!!!")
 }
 
 playGame();
