@@ -1,4 +1,4 @@
-console.log("Hello World") 
+alert("Hello World") 
 function getComputerChoice (){
     let num=Math.random();
     console.log(num) ;
@@ -16,31 +16,31 @@ function playRound(humanChoice, computerChoice) {
   // your code here!
   humanChoice=humanChoice.toLowerCase();
   if (humanChoice===computerChoice) {
-    console.log(`draw! human ${humanChoice} bot ${computerChoice}`)
+    alert(`draw! human ${humanChoice} bot ${computerChoice}`)
   } else if (humanChoice==="rock"&&computerChoice==="scissors"
     ||humanChoice==="paper"&&computerChoice==="rock"
     ||humanChoice==="scissors"&&computerChoice==="paper"
   ){
     humanScore++;
-    console.log(`human wins!human ${humanChoice} bot ${computerChoice}`)
-  }else {console.log(`bot wins!human ${humanChoice} bot ${computerChoice}`)
+    alert(`human wins!human ${humanChoice} bot ${computerChoice}`)
+  }else {alert(`bot wins!human ${humanChoice} bot ${computerChoice}`)
     computerScore++;
 }
 }
 
 function playGame(){
     playRound(getHumanChoice(), getComputerChoice());
-    console.log(humanScore+" "+computerScore);
+    alert(humanScore+" "+computerScore);
     playRound(getHumanChoice(), getComputerChoice());
-    console.log(humanScore+" "+computerScore);
+    alert(humanScore+" "+computerScore);
     playRound(getHumanChoice(), getComputerChoice());
-    console.log(humanScore+" "+computerScore);
+    alert(humanScore+" "+computerScore);
     playRound(getHumanChoice(), getComputerChoice());
-    console.log(humanScore+" "+computerScore);
+    alert(humanScore+" "+computerScore);
     playRound(getHumanChoice(), getComputerChoice());
-    console.log(humanScore+" "+computerScore);
-    if (humanScore>computerScore) console.log("human beats bot");
-    else console.log("human is loser")
+    alert(humanScore+" "+computerScore);
+    if (humanScore>computerScore) alert("human beats bot");
+    else alert("human is loser")
 }
 
 playGame();
